@@ -21,7 +21,11 @@ const Index = ({ reddit }) => {
 
           <ul>
             {rjson.data.children.map((p, i) => (
-            <li key={i}>{p.data.title}</li>
+            <li key={i}>
+            <p>{p.data.author}</p>
+              <p>{p.data.title}</p>
+              <p>{p.data.selftext}</p>
+            </li>
             ))}
           </ul>
         </div> 
